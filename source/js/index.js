@@ -61,4 +61,4 @@ const loop = () => {
     }, 80);
 };
 
-loop()
+loop();
