@@ -12,8 +12,77 @@
 html,
 body {
 
-    overflow-x: hidden;
+    overflow: hidden;
 
-    background: whitesmoke;
+    //font-family: 'Lato', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
 
-} 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+
+    & h1 {
+        
+        //color: #6cb0f6;
+        text-align: center;
+
+        font-size: 7vw;
+
+        min-width: 100vw;
+        min-height: 15vh;
+
+        & #target {
+
+            display: flex;
+            width: 300px;
+            text-align: left;
+            animation: color 30s alternate infinite;
+            perspective: 200px;
+            transform: translateX(26px);
+
+        }
+
+    }
+
+}
+
+.word {
+
+position: absolute;
+
+}
+
+@keyframes color {
+
+    0% {color: #6cb0f6;}
+    50% {color: #ec006e;}
+    100% {color: #6cb0f6;}
+
+}
+
+.letter {
+
+    transform: translateZ(200px);
+
+}
+
+@keyframes anim {
+
+    25% {
+
+        transform: translateZ(0px);
+        opacity: 1;
+
+    }
+
+    32% {
+
+        opacity: 0;
+        transform: translateZ(-280px) translateX(200px);
+
+    }
+
+}
