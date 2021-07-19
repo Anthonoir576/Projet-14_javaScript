@@ -1,28 +1,19 @@
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-html,
 body {
-  overflow: hidden;
+  min-height: 100vh;
   font-family: "Josefin Sans", sans-serif;
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: 100vw;
-  height: 100vh;
+  justify-content: center;
+  overflow: hidden;
+  font-size: 2.5vw;
 }
-html h1,
-body h1 {
-  text-align: center;
-  font-size: 7vw;
-  min-width: 100vw;
-  min-height: 15vh;
-}
-html h1 #target,
-body h1 #target {
+body #target {
   display: flex;
   width: 300px;
   text-align: left;
@@ -30,11 +21,9 @@ body h1 #target {
   perspective: 200px;
   transform: translateX(26px);
 }
-
-.word {
+body .word {
   position: absolute;
 }
-
 @keyframes color {
   0% {
     color: #6cb0f6;
@@ -46,10 +35,9 @@ body h1 #target {
     color: #6cb0f6;
   }
 }
-.letter {
+body .letter {
   transform: translateZ(200px);
 }
-
 @keyframes anim {
   25% {
     transform: translateZ(0px);

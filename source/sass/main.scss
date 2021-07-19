@@ -1,88 +1,75 @@
-// ######### RESET #################
 * {
 
-    padding: 0;
     margin: 0;
-
+    padding: 0;
     box-sizing: border-box;
 
 }
 
-// ########## CSS ##################
-html,
 body {
 
-    overflow: hidden;
-
-    //font-family: 'Lato', sans-serif;
+    min-height: 100vh;
+    
     font-family: 'Josefin Sans', sans-serif;
-
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    font-size: 2.5vw;
 
-    width: 100vw;
-    height: 100vh;
+    
+    #target {
 
-    & h1 {
+        display: flex;
+        width: 300px;
+        text-align: left;
+        animation: color 30s alternate infinite;
+        perspective: 200px;
+        transform: translateX(26px);
+
+    }
+
+    .word {
+
+        position: absolute;
         
-        //color: #6cb0f6;
-        text-align: center;
-
-        font-size: 7vw;
-
-        min-width: 100vw;
-        min-height: 15vh;
-
-        & #target {
-
-            display: flex;
-            width: 300px;
-            text-align: left;
-            animation: color 30s alternate infinite;
-            perspective: 200px;
-            transform: translateX(26px);
-
         }
-
-    }
-
-}
-
-.word {
-
-position: absolute;
-
-}
-
-@keyframes color {
-
-    0% {color: #6cb0f6;}
-    50% {color: #ec006e;}
-    100% {color: #6cb0f6;}
-
-}
-
-.letter {
-
-    transform: translateZ(200px);
-
-}
-
-@keyframes anim {
-
-    25% {
-
-        transform: translateZ(0px);
-        opacity: 1;
-
-    }
-
-    32% {
-
-        opacity: 0;
-        transform: translateZ(-280px) translateX(200px);
-
-    }
+        
+        @keyframes color {
+        
+        0% {color: #6cb0f6;}
+        50% {color: #ec006e;}
+        100% {color: #6cb0f6;}
+        
+        }
+        
+        .letter {
+        
+        transform: translateZ(200px);
+        
+        }
+        
+        @keyframes anim {
+        
+            25% {
+        
+                transform: translateZ(0px);
+                opacity: 1;
+        
+            }
+        
+            32% {
+        
+                opacity: 0;
+                transform: translateZ(-280px) translateX(200px);
+        
+            }
+        
+        }
+        
 
 }
+
+
+
+  
